@@ -1,113 +1,132 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	
-	<title>New Login Page</title>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
-	<link rel="stylesheet" type="text/css" href="css/loginStyle.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Wen Xiao">
+
+    <title>Google Developer Studen Clubs</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="icon " href="img/logo.png" type="image/png ">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
-	<div class="row gmailStyle">
-		<div class="container-fluid">
-			<div class="valign-wrapper screenHeight">
-					<div class="col card s12 m8 l6 xl4 autoMargin setMaxWidth overflowHidden">
-						<div class="row hidden" id="progress-bar">
-					    <div class="progress mar-no">
-					      <div class="indeterminate"></div>
-					    </div>
-						</div>
-						<div class="clearfix mar-all pad-all"></div>
 
-						<img src="images/Googlelogo.png" class="logoImage" />
-						<h5 class="center-align mar-top mar-bottom formTitle">Sign In</h5>
-						<p class="center-align pad-no mar-no">to continue to application</p>
+<body id="page-top">
 
-						<div class="clearfix mar-all pad-all"></div>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div id="logo"> 
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <img src="img/logo.png">  
+            <!-- Collect the nav links, forms, and other content for toggling -->
+                <ul class="nav navbar-nav navbar-right" style="padding-top: 23px; padding-right: 2%;">
+                    <li>
+                        <a class="page-scroll" href="#about">About us</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#edu">Domain</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#work">Gallery</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#experince">Team</a>
+                    </li>
+                    <li>
+                      <div class="login" id= "login">  
+                      <a href="form.html"  class="page-scroll" href="#skill">Login/Sign up</a>
+                      </div>
 
-						<div id="formContainer" class="goRight">
-
-							<form class="loginForm">
-								<div class="input-fields-div autoMargin">
-									<div class="input-field">
-					          <input id="user_name" type="text" class="validate">
-					          <label for="user_name">Email or Phone</label>
-					        </div>
-									<div id="passwordDiv" class="input-field scale-transition scale-out">
-					          <input id="pass_word" type="password" class="validate">
-					          <label for="pass_word">Password</label>
-										<a href="javascript:void(0)" class="showPassword" onclick="showPassword()"><i class="material-icons md-18">visibility</i></a>
-					        </div>
-									<div id="enterOTPDiv" class="input-field scale-transition scale-out">
-					          <input id="enter_OTP" type="text" class="validate">
-					          <label for="enter_OTP">OTP</label>
-					        </div>
-									<a href="#hasPassword" class="passwordOrOTP" data-PassOTP="Password" onClick="passwordOrOTP(this)">I have password</a>
-									<p>New member<br/><a href="#createAccountNow" class="createAccountNow">Creating a account</a></p>
-								</div>
-								<div class="input-fields-div autoMargin right-align">
-									<a href="#enterOTP" class="loginNextBtn waves-effect waves-light btn">Get OTP</a>
-									<button type="submit" onclick="login()" class="loginBtn waves-effect waves-light btn hide">Login</button>
-								</div>
-							</form>
-
-							<form class="signUpForm">
-								<div class="input-fields-div autoMargin">
-									<div class="row input-inline-field">
-										<div class="input-field col s6">
-						          <input id="first_name" type="text" class="validate">
-						          <label for="first_name">First Name</label>
-						        </div>
-										<div class="input-field col s6">
-						          <input id="last_name" type="text" class="validate">
-						          <label for="last_name">Last Name</label>
-						        </div>
-									</div>
-									<div class="input-field">
-					          <input id="reg_user_name" type="text" class="validate">
-					          <label for="reg_user_name">Email </label>
-                                        <div class="input-field">
-					          <input id="reg_user_name" type="text" class="validate">
-					          <label for="reg_user_name">Registration Number</label>
-										<span class="helper-text" data-error="wrong" data-success="right">Username will be the first and last name you have provided</span>
-					        </div>
-									<div class="row input-inline-field">
-										<div id="reg_passwordDiv" class="input-field col s6">
-						          <input id="reg_pass_word" type="password" class="validate">
-						          <label for="reg_pass_word">Password</label>
-											<a href="javascript:void(0)" class="showPassword" onclick="showPassword()"><i class="material-icons md-18">visibility</i></a>
-						        </div>
-										<div id="rePasswordDiv" class="input-field col s6">
-						          <input id="re_pass_word" type="password" class="validate">
-						          <label for="re_pass_word">Confirm</label>
-						        </div>
-										<div class="input-field col s12 mar-no">
-											<span class="helper-text" data-error="wrong" data-success="right">Use 8 or more characters with a mix of letters, numbers & symbols</span>
-										</div>
-									</div>
-									<p>I have an account <a href="#" class="backToLogin">Login Now</a></p>
-								</div>
-								<div class="input-fields-div autoMargin right-align">
-									<button type="submit" onclick="register()" class="registerBtn waves-effect waves-light btn">Register</button>
-								</div>
-							</form>
-							<div class="clearfix"></div>
-						</div>
+                        <div class="dropdown">
+                          <button onclick="myFunction()" class="dropbtn">Profile <i class="fa fa-caret-down"></i></button>
+                          <div id="myDropdown" class="dropdown-content">
+                            <a href="#">Name  <br><br>
+                              Registration Number
+                            </a>
+                          </div>
+                
+                    </li>
+                </ul>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
 
 
-						<div class="clearfix mar-all pad-all"></div>
-					</div>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<script type="text/javascript" src="js/cash.min.js"></script>
-	<script type="text/javascript" src="js/routie.min.js"></script>
-	<script type="text/javascript" src="js/loginScript.js"></script>
-</body>
-</html>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </nav>
+  <!-- Define the slideshow container -->
+  <div id="slideshow" style="padding-top: 180px; padding-bottom: 40px;">
+    <div class="slide-wrapper">
+  
+      <!-- Define each of the slides
+         and write the content -->
+      <div class="slide">
+        <img class="slide-number" src="img/2.png">
+      </div>
+      <div class="slide">
+        <img class="slide-number" src="img/3.png">
+      </div>
+      <div class="slide">
+        <img class="slide-number" src="img/2.png">
+      </div>
+      <img class="slide" src="img/3.png">
+      </div>
+    </div>
+  </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+    <script src="js/creative1.js"></script>
+    <footer>
+        <div class="container text-muted text-center py-3 mt-5">
+             <img src="img/logo2.png">
+        </div>
+      </footer>
+    </body>
+    </html>
