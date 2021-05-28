@@ -74,13 +74,13 @@
                                         <div class="input-field">
 					          <input id="reg_user_name" type="text" class="validate">
 					          <label for="reg_user_name">Registration Number</label>
-										<span class="helper-text" data-error="wrong" data-success="right">Username will be the first and last name you have provided</span>
+										<!-- <span class="helper-text" data-error="wrong" data-success="right">Username will be the first and last name you have provided</span> -->
 					        </div>
 									<div class="row input-inline-field">
 										<div id="reg_passwordDiv" class="input-field col s6">
 						          <input id="reg_pass_word" type="password" class="validate">
 						          <label for="reg_pass_word">Password</label>
-											<a href="javascript:void(0)" class="showPassword" onclick="showPassword()"><i class="material-icons md-18">visibility</i></a>
+											<!-- <a href="javascript:void(0)" class="showPassword" onclick="showPassword()"><i class="material-icons md-18">visibility</i></a> -->
 						        </div>
 										<div id="rePasswordDiv" class="input-field col s6">
 						          <input id="re_pass_word" type="password" class="validate">
@@ -109,29 +109,31 @@
 	<script type="text/javascript" src="js/cash.min.js"></script>
 	<script type="text/javascript" src="js/routie.min.js"></script>
 	<script type="text/javascript" src="js/loginScript.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-auth.js"></script>s
+	<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
 
-	<!-- TODO: Add SDKs for Firebase products that you want to use
-	     https://firebase.google.com/docs/web/setup#available-libraries -->
-	<script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-analytics.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-firestore.js"></script>
-	<script>
-	  // Your web app's Firebase configuration
-	  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-	  var firebaseConfig = {
-	    apiKey: "AIzaSyA14kswJsK2hnlqEAqnXozqX0JMOeL3QoI",
-	    authDomain: "dsccloud-a4ee1.firebaseapp.com",
-	    projectId: "dsccloud-a4ee1",
-	    storageBucket: "dsccloud-a4ee1.appspot.com",
-	    messagingSenderId: "216147699663",
-	    appId: "1:216147699663:web:9870e65e59071b1afb94ba",
-	    measurementId: "G-8SLJ460CT5"
-	  };
-	  // Initialize Firebase
-	  firebase.initializeApp(firebaseConfig);
-	  firebase.analytics();
-	</script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+		 <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDb4DUzPGH6peEfyAhrxjC7fbgxC3_z5X8",
+    authDomain: "dsccloudp1.firebaseapp.com",
+    projectId: "dsccloudp1",
+    storageBucket: "dsccloudp1.appspot.com",
+    messagingSenderId: "26300087707",
+    appId: "1:26300087707:web:6c80d02053c084672db53e",
+    measurementId: "G-7GK14MJNK2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
 	<script src="jason.js">  </script>
 </body>
 </html>

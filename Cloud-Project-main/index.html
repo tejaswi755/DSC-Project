@@ -25,7 +25,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
-    
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,9 +39,9 @@
 <body id="page-top">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div id="logo"> 
+        <div id="logo">
             <!-- Brand and toggle get grouped for better mobile display -->
-                <img src="img/logo.png">  
+                <img src="img/logo.png">
             <!-- Collect the nav links, forms, and other content for toggling -->
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 23px; padding-right: 2%;">
                     <li>
@@ -57,18 +57,17 @@
                         <a class="page-scroll" href="#experince">Team</a>
                     </li>
                     <li>
-                      <div class="login" id= "login">  
+                      <div class="login" id= "login">
                       <a href="form.html"  class="page-scroll" href="#skill">Login/Sign up</a>
                       </div>
 
-                        <div class="dropdown">
+                        <div class="dropdown" id= "ddropdown">
                           <button onclick="myFunction()" class="dropbtn">Profile <i class="fa fa-caret-down"></i></button>
                           <div id="myDropdown" class="dropdown-content">
-                            <a href="#">Name  <br><br>
-                              Registration Number
-                            </a>
+                            <p id ="showdata">f </p>
+                            <button id="logout " onclick="logout()">logout</button>
                           </div>
-                
+
                     </li>
                 </ul>
             <!-- /.navbar-collapse -->
@@ -76,7 +75,7 @@
         <!-- /.container-fluid -->
 
 
-      
+
 
 
 
@@ -93,7 +92,7 @@
   <!-- Define the slideshow container -->
   <div id="slideshow" style="padding-top: 180px; padding-bottom: 40px;">
     <div class="slide-wrapper">
-  
+
       <!-- Define each of the slides
          and write the content -->
       <div class="slide">
@@ -128,5 +127,28 @@
              <img src="img/logo2.png">
         </div>
       </footer>
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+
+
+		 <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script> 
+
+<script>
+  
+  var firebaseConfig = {
+    apiKey: "AIzaSyDb4DUzPGH6peEfyAhrxjC7fbgxC3_z5X8",
+    authDomain: "dsccloudp1.firebaseapp.com",
+    projectId: "dsccloudp1",
+    storageBucket: "dsccloudp1.appspot.com",
+    messagingSenderId: "26300087707",
+    appId: "1:26300087707:web:6c80d02053c084672db53e",
+    measurementId: "G-7GK14MJNK2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="jason.js">  </script>
     </body>
     </html>

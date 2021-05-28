@@ -1,5 +1,22 @@
+
 const auth = firebase.auth();
 
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    document.getElementById("ddropdown").style.display="block";
+    document.getElementById("login").style.display="none";
+    // User is signed in.
+    var user = firebase.auth().currentUser;
+if(user!=null){
+   var email_id=user.email;
+   document.getElementById("showdata").innerHTML="welcome: "+email_id
+}
+  } else {
+    document.getElementById("ddropdown").style.display="none";
+    document.getElementById("login").style.display="block";
+    // No user is signed in.
+  }
+});
 
 function login(){
   var userEmail = document.getElementById("user_name").value
@@ -16,10 +33,6 @@ function login(){
         var errorMessage = error.message;
         window.alert("Error: " + errorMessage);
       });
-
-
-
-
 }
 
 function register(){
@@ -52,3 +65,12 @@ function register(){
    console.error("Error adding document: ", error);
 });
    }
+
+   
+   function logout(){
+    firebase.auth().signOut().then(() => {
+  // Sign-out successful.
+  }).catch((error) => {
+  // An error happened.
+  });
+  }
